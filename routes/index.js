@@ -1,10 +1,9 @@
 import { Router } from 'express'
+import * as apiCtrl from '../controllers/api.js'
 
 const router = Router()
 
-// GET localhost:3000
-router.get('/', function(req, res) {
-  res.status(200).json({ msg: 'hello, friend' })
-})
+// GET localhost:3002
+router.post('/api', apiCtrl.bookSearch)
 
 export { router }
